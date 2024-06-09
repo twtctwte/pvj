@@ -36,7 +36,7 @@ jobs:
       run: |
         IMAGE_URL=$(curl -sL "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US" | jq -r '.images[0].url')
         FULL_IMAGE_URL="https://pix.tawertwtc.xyz/api/random?format=image"
-        FILENAME=$(date +'%Y%m%d').jpg
+        FILENAME=$(date +'%Y%m%d%h%i%s').jpg
         echo "Downloading Bing Wallpaper: $FULL_IMAGE_URL"
         wget -q -O "$FILENAME" "$FULL_IMAGE_URL"
         mv "$FILENAME" "wallpapers/$FILENAME"
