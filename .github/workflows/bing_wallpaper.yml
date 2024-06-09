@@ -2,7 +2,7 @@ name: Get Bing Wallpaper
 
 on:
   schedule:
-    - cron: '0 7 * * *' # 每天下午3点运行 (北京时间)
+    - cron: '* * * * *' # 每天下午3点运行 (北京时间)
   push:
     paths:
       - '.github/**' # 监听 .github 文件夹的修改
@@ -35,7 +35,7 @@ jobs:
     - name: Download Today's Bing Wallpaper
       run: |
         IMAGE_URL=$(curl -sL "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US" | jq -r '.images[0].url')
-        FULL_IMAGE_URL="https://www.bing.com${IMAGE_URL/1920x1080/UHD}"
+        FULL_IMAGE_URL="https://pix.tawertwtc.xyz/api/random?format=image"
         FILENAME=$(date +'%Y%m%d').jpg
         echo "Downloading Bing Wallpaper: $FULL_IMAGE_URL"
         wget -q -O "$FILENAME" "$FULL_IMAGE_URL"
