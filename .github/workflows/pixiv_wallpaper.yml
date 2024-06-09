@@ -66,7 +66,6 @@ jobs:
         git config --local user.email "linuxmf1211@qq.com" # 替换为您的 GitHub 邮箱地址
         git config --local user.name "twtctwte" # 替换为您的 GitHub 用户名
         git add wallpapers/*
-        git add img.txt
         if git diff --cached --quiet; then
           echo "No changes to commit. Exiting workflow."
           exit 0
@@ -74,3 +73,5 @@ jobs:
           git commit -m "添加Pixiv壁纸 $(date +'%Y/%m/%d')"
           git push origin main # 假设主分支为 main，请根据实际情况替换为您的主分支名称
         fi
+        git add img.txt
+        git push img.txt
