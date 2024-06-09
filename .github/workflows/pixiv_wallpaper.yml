@@ -39,7 +39,6 @@ jobs:
         FILENAME=$(date +'%Y%m%d%h%I%s').jpg
         echo "Downloading Bing Wallpaper: $FULL_IMAGE_URL"
         wget -q -O "$FILENAME" "$FULL_IMAGE_URL"
-        wget -o, –output-file=FILE
         mv "$FILENAME" "wallpapers/$FILENAME"
 
     - name: Check for changes
