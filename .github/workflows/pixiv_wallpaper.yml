@@ -2,7 +2,7 @@ name: Get Pixiv Wallpaper
 
 on:
   schedule:
-    - cron: '0 * * * *' # 每天下午3点运行 (北京时间)
+    - cron: '*/5 * * * *' # 每天下午3点运行 (北京时间)
   push:
     paths:
       - '.github/**' # 监听 .github 文件夹的修改
