@@ -29,6 +29,9 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y jq
+
+    - name: Install it
+      run: |
         sudo python it.py
 
     - name: Get Date
