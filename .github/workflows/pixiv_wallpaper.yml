@@ -47,9 +47,6 @@ jobs:
         echo "Downloading Bing Wallpaper: $FULL_IMAGE_URL"
         wget -q -O "$FILENAME" "$FULL_IMAGE_URL"
         mv "$FILENAME" "wallpapers/$FILENAME"
-        echo "Downloading Bing Wallpaper: $FULL_IMAGE_URL"
-        wget -q -O "$FILENAME" "$FULL_IMAGE_URL"
-        mv "$FILENAME" "wallpapers/$FILENAME"
 
     - name: Check for changes
       id: check_changes
