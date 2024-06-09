@@ -1,1 +1,1 @@
-<p>请访问 /api.php</p>
+<p>请访问api.php</p>
