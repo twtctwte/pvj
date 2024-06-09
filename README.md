@@ -1,5 +1,5 @@
-# 每日爬取 bing 壁纸
-利用 Github Actions，每日爬取 bing 壁纸，存储到 wallpapers 文件夹。
+# 爬取 pixiv 图片
+利用 Github Actions，每日爬取 pixiv 图片，存储到 wallpapers 文件夹。
 ## 运行方式
 1. 每天固定时间运行，Cron表达式 (UTC时间)。
 2. 监听 .github 文件夹的修改。
