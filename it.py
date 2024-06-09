@@ -16,4 +16,4 @@ def listfiles(rootDir, txtfile, label=0):
              count += 1
     print(rootDir + ' has ' + str(count) + ' files')
 
-listfiles('wallpapers/', '/img.txt')
+listfiles('wallpapers/', 'img.txt')
