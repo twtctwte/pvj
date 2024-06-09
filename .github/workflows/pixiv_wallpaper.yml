@@ -30,7 +30,7 @@ jobs:
 
     - name: Create folders
       run: |
-        mkdir -p "wallpapers/${{ env.YEAR }}/${{ env.MONTH }}"
+        mkdir -p "wallpapers"
 
     - name: Download Today's Pixiv Wallpaper
       run: |
