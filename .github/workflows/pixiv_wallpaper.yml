@@ -9,10 +9,17 @@ on:
   workflow_dispatch: # 添加 workflow_dispatch 触发器，手动触发工作流程
 
 jobs:
+    
   get_today_wallpaper:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@master
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+        
     - name: Checkout repository
       uses: actions/checkout@v2
       with:
@@ -22,6 +29,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y jq
+        sudo python it.py
 
     - name: Get Date
       run: |
@@ -55,6 +63,7 @@ jobs:
         git config --local user.email "linuxmf1211@qq.com" # 替换为您的 GitHub 邮箱地址
         git config --local user.name "twtctwte" # 替换为您的 GitHub 用户名
         git add wallpapers/*
+        git add img.txt
         if git diff --cached --quiet; then
           echo "No changes to commit. Exiting workflow."
           exit 0
