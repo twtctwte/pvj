@@ -3,7 +3,7 @@
 /*
 $from = parse_url($_SERVER['HTTP_REFERER']);
 
-if ($from['host']!='irr.ink' &amp;&amp; $from['host']!='https://cdn.jsdmirror.com/gh/twtctwte/pixiv/') {
+if ($from['host']!='irr.ink' &amp;&amp; $from['host']!='cdn.jsdmirror.com/gh/twtctwte/pixiv') {
      header('HTTP/1.1 404 Not Found');
      header("status: 404 Not Found"); //分析来路，若不使用CDN而且想要防止盗用可把这段的注释去掉
      exit;
