@@ -1,5 +1,5 @@
 # 爬取 pixiv 图片
-利用 Github Actions，爬取 pixiv 图片，存储到 wallpapers 文件夹,再利用php制作随机图片api，最后部署至vercel。
+利用 Github Actions，爬取 pixiv 图片，存储到 wallpapers 文件夹。
 ## 运行方式
 1. 每天固定时间运行，Cron表达式 (UTC时间)。
 2. 监听 .github 文件夹的修改。
