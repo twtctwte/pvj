@@ -124,4 +124,46 @@ jobs:
           git commit -m "添加txt"
           git push origin main # 假设主分支为 main，请根据实际情况替换为您的主分支名称
         fi
-      
+
+    - name: Download Today's Pixiv Wallpaper
+      run: |
+        IMAGE_URL=$(curl -sL "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US" | jq -r '.images[0].url')
+        FULL_IMAGE_URL="https://pix.tawertwtc.xyz/api/random?format=image"
+        FILENAE=$(date +'%Y%m%d%h%I%s%s%s').jpg
+        echo "Downloading Bing Wallpaper: $FULL_IMAGE_URL"
+        wget -q -O "$FILENAE" "$FULL_IMAGE_URL"
+        mv "$FILENAE" "wallpapers/$FILENAME"
+
+    - name: Check for changes
+      id: check_chang
+      run: |
+        if git diff --quiet; then
+          echo "No changes to commit. Exiting workflow."
+          exit 0
+        fi
+
+    - name: Install it
+      run: |
+        sudo python it.py
+
+    - name: 提交并推送更改
+      if: steps.check_changes.outputs.result != 'true'
+      run: |
+        git config --local user.email "linuxmf1211@qq.com" # 替换为您的 GitHub 邮箱地址
+        git config --local user.name "twtctwte" # 替换为您的 GitHub 用户名
+        git add wallpapers/*
+        if git diff --cached --quiet; then
+          echo "No changes to commit. Exiting workflow."
+          exit 0
+        else
+          git commit -m "添加Pixiv壁纸 $(date +'%Y/%m/%d')"
+          git push origin main # 假设主分支为 main，请根据实际情况替换为您的主分支名称
+        fi
+        git add img.txt
+        if git diff --cached --quiet; then
+          echo "No changes to commit. Exiting workflow."
+          exit 0
+        else
+          git commit -m "添加txt"
+          git push origin main # 假设主分支为 main，请根据实际情况替换为您的主分支名称
+        fi
