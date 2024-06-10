@@ -7,3 +7,5 @@ cd
 git add wallpapers/*
 git commit -m "添加Pixiv壁纸 $(date +'%Y/%m/%d')"
 git push origin main
+cd
+rm  -r  wallpapers
