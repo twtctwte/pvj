@@ -2,5 +2,5 @@
 #需提前安装配置git
 mkdir -p "wallpapers"
 cd wallpapers
-wget https://pix.tawertwtc.xyz/api/random?format=image
+wget -q -O https://pix.tawertwtc.xyz/api/random?format=image
 cd
