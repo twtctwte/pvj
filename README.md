@@ -9,3 +9,12 @@ img.txt是自动推送的图片目录，可以采集到服务器做随机图片a
 git img.txt
 
 修改api-2.php
+
+# 复制
+复制本仓库
+
+修改工作流git用户名
+
+添加ssh变量
+
+ps:懒得等github运行可以服务器跑run.sh
