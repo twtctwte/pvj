@@ -2,5 +2,5 @@
 #需提前安装配置git
 mkdir -p "wallpapers"
 cd wallpapers
-wget -q -O "$FILENAME" "https://pix.tawertwtc.xyz/api/random?format=image"
+wget -q -O "$(date +'%Y%m%d%h%I%s').jpg" "https://pix.tawertwtc.xyz/api/random?format=image"
 cd
