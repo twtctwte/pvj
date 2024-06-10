@@ -4,9 +4,3 @@
 img.txt是自动推送的图片目录，可以采集到服务器做随机图片api
 
 利用本仓库搭建的pixiv随机图片api:p.tawertwtc.xyz
-
-感谢
-
-1.pixiv.cat[图片获取]
-
-2.www.7ed.net[github图片加速]
