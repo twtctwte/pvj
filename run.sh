@@ -8,4 +8,5 @@ git add wallpapers/*
 git commit -m "添加Pixiv壁纸 $(date +'%Y/%m/%d')"
 git push origin main
 cd
-rm  -r  wallpapers
+#rm  -r  wallpapers #上传图片至github后是否删除服务器图片
+
